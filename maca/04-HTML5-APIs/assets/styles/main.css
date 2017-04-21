@@ -1,0 +1,32 @@
+.dropzone{
+	height: 200px;
+	width: 200px;
+	border: 2px dashed #ccc;
+	color: #ccc;
+	line-height: 200px;
+	text-align: center;
+	float: left;
+	margin-left: 40%;
+}
+
+.dragover{
+	border-color: #000;
+	color: #000;
+}
+
+.buttons{
+	margin-top: 1%;
+}
+
+textarea{
+	margin-top: 2%;
+}
+
+.localData{
+	margin-top: 2%;
+}
+
+.fileTitles{
+	float: right;
+	margin-right: 40%;
+}
