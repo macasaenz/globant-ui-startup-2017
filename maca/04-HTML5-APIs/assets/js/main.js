@@ -7,8 +7,9 @@ window.onload = function(){
   document.getElementById("dropzone").addEventListener("dragover", dragover);
   document.getElementById("dropzone").addEventListener("dragleave", dragleave);
   document.getElementById("dropzone").addEventListener("drop", drop);
-
-
+  document.getElementById("openConnection").addEventListener("click", openCon);
+  document.getElementById("closeConnection").addEventListener("click", closeCon);
+  document.getElementById("sendMessage").addEventListener("click", sendMsg);
 
 }
 // Excercises 1-2
@@ -59,7 +60,7 @@ request.onerror = function(event) {
          
 request.onsuccess = function(event) {
     db = event.target.result;
-    console.log("success: "+ db);
+ //   console.log("success: "+ db);
 };
       
 request.onupgradeneeded = function(event) {
@@ -159,11 +160,53 @@ let drop = function drop(e){
 }
 
 
+//Excercise 4
 
+let socket;
 
+let openCon = function openCon(){                       // Create WebSocket connection.
+  socket = new WebSocket('ws://echo.websocket.org/');
+  let info = document.createElement("div");
+  info.innerHTML = "Opening connection. Ready state = " + socket.readyState;
+  document.getElementById("WebSockInfo").appendChild(info);
+  socket.addEventListener('open', handleOpen);
+  socket.addEventListener('message', handleMessage);
+  socket.addEventListener('close', handleClose);
+}
 
+let closeCon = function closeCon(){
+  socket.close();
+  let info = document.createElement("div");
+  info.innerHTML = "Closing connection. Ready state = " + socket.readyState;
+  document.getElementById("WebSockInfo").appendChild(info);
+}
 
+let handleOpen = function handleOpen(){
+  let info = document.createElement("div");
+  info.innerHTML = "Connection opened. Ready state = " + socket.readyState;
+  document.getElementById("WebSockInfo").appendChild(info);
+  socket.send('Hello Server!');
+}
 
+let handleMessage = function handleMessage(){
+  let info = document.createElement("div");
+  info.innerHTML = "Message received. Ready state = " + socket.readyState;
+  document.getElementById("WebSockInfo").appendChild(info);
+  let info2 = document.createElement("div");
+  info2.innerHTML = "Message: " + event.data;
+  document.getElementById("WebSockInfo").appendChild(info2);
+}
+
+let handleClose = function handleClose(){
+  let info = document.createElement("div");
+  info.innerHTML = "Connection closed. Ready state = " + socket.readyState;
+  document.getElementById("WebSockInfo").appendChild(info);
+}
+
+let sendMsg = function sendMsg(){
+  let info = document.getElementById("msgForWS").value;
+  socket.send(info);
+}
 
 
 

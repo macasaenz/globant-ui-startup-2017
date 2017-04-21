@@ -13,21 +13,35 @@
 <body>
 	<div class="container">
 
-		<textarea placeholder="Type your username here" id="userName"></textarea>
-		<div class="buttons">
-			<button id="saveLocal"> Save Local</button>		
-			<button id="showMeLocal">Show me local</button>
-			<button id="indexedDB"> Save IDB</button>
-			<button id="showMeIDB">Show me IDB</button>
-			<button id="clear"> Clear </button>
-		</div>
-		<div class="localData"> LOCAL DATA:
-			<div id="localData"></div>
+		<div class="saveInfo">
+			<h2> Save Info </h2>
+			<textarea placeholder="Type your username here" id="userName"></textarea>
+			<div class="buttons">
+				<button id="saveLocal"> Save Local</button>		
+				<button id="showMeLocal">Show me local</button>
+				<button id="indexedDB"> Save IDB</button>
+				<button id="showMeIDB">Show me IDB</button>
+				<button id="clear"> Clear </button>
+			</div>
+			<div class="localData"> LOCAL DATA:
+				<div id="localData"></div>
+			</div>
 		</div>
 
-		<div class="dropzone" id="dropzone"> Drag files here</div>
-		<div class="fileTitles" id="fileTitle">Files added:</div>
+		<div class="DnD">
+			<h2> Drag and Drop </h2>
+			<div class="dropzone" id="dropzone"> Drag files here</div>
+			<div class="fileTitles" id="fileTitle">Files added:</div>
+		</div>
 
+		<div class="webSocket"> 
+			<h2> WebSocket </h2>
+			<button id="openConnection"> Connect! </button>
+			<button id="closeConnection"> Close connection </button>
+			<textarea placeholder="Type msg to send" id="msgForWS"></textarea>
+			<button id="sendMessage"> Send Message </button>
+			<div id="WebSockInfo"> <h3> Log </h3> </div>
+		</div>
 	</div>	
 
 </body>
