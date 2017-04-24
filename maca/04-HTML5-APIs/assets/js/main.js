@@ -146,15 +146,24 @@ let dragleave = function dragleave(e){
 }
 
 /*
- * Handles drop event, changing classList of dropzone for styling and showing title of dropped files
+ * Handles drop event, changing classList of dropzone for styling, showing title of dropped files and loading text content in textarea
  */
 let drop = function drop(e){
   e.stopPropagation();
   e.preventDefault();
+  let txtArea = document.getElementById("userName");
   let dropzone = document.getElementById("dropzone");
   dropzone.classList.remove('dragover');
+
+  var file = e.dataTransfer.files[0],
+  reader = new FileReader();
+  reader.onload = function(event) {
+    txtArea.innerText = event.target.result;
+  };
+  reader.readAsText(file);
+
   let fileTitle = document.getElementById("fileTitle");
-  for (var i = 0, file; file = e.dataTransfer.files[i]; i++) {
+  for (var i = 0; file = e.dataTransfer.files[i]; i++) {
     let title = document.createElement("div");
     title.innerHTML = file.name;
     fileTitle.appendChild(title);

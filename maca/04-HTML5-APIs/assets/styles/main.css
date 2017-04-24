@@ -30,3 +30,8 @@
 .webSocket{
 	clear: both;
 }
+
+#userName{
+	width: 500px;
+	height: 50px;
+}
