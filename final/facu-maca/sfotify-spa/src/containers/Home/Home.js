@@ -1,5 +1,7 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-var FavoriteSongBox = require('../../components/FavoriteSongBox/FavoriteSongBox');
+import React, { Component } from 'react';
+var FavoriteSongBox = require('../../components/FavoriteSongsContainer/FavoriteSongBox');
 var Footer = require('../../components/Footer/Footer');
 var Header = require('../../components/Header/Header');
 var InputSearch = require('../../components/InputSearch/InputSearch');
@@ -15,11 +17,11 @@ class Home extends React.Component{
         return(
             <div className='content'>
 
-                <div className="header">
+                <div className='header'>
                     <Header />
                 </div>
 
-                <div className="title">
+                <div className='title'>
                     <Title />
                 </div>
 
@@ -44,20 +46,9 @@ class Home extends React.Component{
 
 module.exports = Home;
 
-import React, { Component } from 'react';
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import FavoriteSongsContainer from '../../components/FavoriteSongsContainer/FavoriteSongsContainer';
 
-class Home extends Component {
-  render() {
-    return (
-      
-      <FavoriteSongsContainer />
-
-    );
-  }
-}
-
-export default Home;
 
 
