@@ -1,4 +1,5 @@
-let genSearch = function genSearch(type, q, callback){
+class apiCalls{
+	genSearch(type, q, callback){
 	 $.ajax({
           url: 'https://api.spotify.com/v1/search?q=' + q + "&type=" + type,
           success: function (response) {
@@ -7,9 +8,9 @@ let genSearch = function genSearch(type, q, callback){
               callback(response);
           }
       });
-}
+	}
 
-let getArtistAlbum = function getArtistAlbum(idArtista, callback){
+	getArtistAlbum(idArtista, callback){
 	$.ajax({
 		url: "https://api.spotify.com/v1/artists/"+idArtista+"/albums";
 		success: function(response){
@@ -18,9 +19,9 @@ let getArtistAlbum = function getArtistAlbum(idArtista, callback){
 			callback(response);
 		}
 		});
-}
+	}
 
-let getInfoAlbum = function getInfoAlbum(idAlbum, callback){
+	getInfoAlbum(idAlbum, callback){
 	$.ajax({
 		url: 'https://api.spotify.com/v1/albums/' + idAlbum,
 		success: function(response){
@@ -35,14 +36,20 @@ let getInfoAlbum = function getInfoAlbum(idAlbum, callback){
 		//audioObject = new Audio(data.tracks.items[0].preview_url);
 		//audioObject.play();
 	
-}
+	}
 
 //favoritos
 //guardar id del track 
 
-let getFavorites = function getFavorites(favSongsIDs){
+	getFavorites(favSongsIDs){
 	$.ajax({
 		url: 'https://api.spotify.com/v1/tracks?ids='+favSongsIDs,
 		success: 
 	})
+	}
+
 }
+
+
+
+

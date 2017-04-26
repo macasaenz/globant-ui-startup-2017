@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import classnames from 'classnames'
+//import classnames from 'classnames';
+import './Title.css';
 
 class Title extends Component {
   render() {
@@ -7,7 +8,7 @@ class Title extends Component {
     const styleName = this.props.styleName;
     return (
       <div>
-        <h1 className={classnames('default', styleName)}> {title} </h1>
+       {/*<h1 className={classnames('default', styleName)}> {title} </h1>*/ } 
       </div>
     );
   }

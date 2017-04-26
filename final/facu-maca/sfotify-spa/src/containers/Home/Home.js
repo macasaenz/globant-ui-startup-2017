@@ -1,54 +1,24 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import React, { Component } from 'react';
-var FavoriteSongBox = require('../../components/FavoriteSongsContainer/FavoriteSongBox');
-var Footer = require('../../components/Footer/Footer');
-var Header = require('../../components/Header/Header');
-var InputSearch = require('../../components/InputSearch/InputSearch');
-var Subtitle = require('../../components/Subtitle/Subtitle');
-var Title = require( '../../components/Title/Title');
-var react = require('react');
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import './Home.css';
+import Title from '../../components/Title/Title';
+import Subtitle from '../../components/Subtitle/Subtitle';
+import Header from '../../components/Header/Header';
+import InputSearch from '../../components/InputSearch/InputSearch';
+import Footer from '../../components/Footer/Footer';
 
-
-class Home extends React.Component{
-
-    render() {
-
-        return(
-            <div className='content'>
-
-                <div className='header'>
-                    <Header />
-                </div>
-
-                <div className='title'>
-                    <Title />
-                </div>
-
-                 <div className="subTitle">
-                    <Subtitle />
-                </div>
-
-                <div className="inputSearch">
-                    <InputSearch />
-                </div>
-
-                  <div className="favoriteSongBox">
-                    <favoriteSongBox />
-                </div>
-
-            </div>
-        )
-
-    }
-
+class Home extends Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        <Title texts="Sfotify" styleName="text-color-white" />
+        <InputSearch />
+        <Subtitle />
+        <Footer text = "Footer" />
+      </div>
+    );
+  }
 }
 
-module.exports = Home;
-
-
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import FavoriteSongsContainer from '../../components/FavoriteSongsContainer/FavoriteSongsContainer';
-
-
-
+export default Home;
