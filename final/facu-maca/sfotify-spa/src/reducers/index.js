@@ -7,3 +7,8 @@ const rootReducer = combineReducers({
   songs,
   artists
 })
+window.addEventListener("load", function () {
+ document.getElementById("search").addEventListener("click",function (){
+   apiCalls.hola();
+ })
+})

@@ -15,7 +15,7 @@ class Home extends Component {
         <Title texts="Sfotify" styleName="text-color-white" />
         <InputSearch />
         <Subtitle />
-        <Footer text = "Footer" />
+        <Footer text="Footer" />
       </div>
     );
   }
