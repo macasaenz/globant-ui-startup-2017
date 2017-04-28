@@ -43,11 +43,11 @@ class Artist extends Component {
         </ul>  */}
 
       </div >
-      <ul >
+
         {this.state.albums.map(function (listValue, i) {
           return <li key={i} > <Album albumName={listValue[i].name} logo={listValue[i].images[1].url} albumId={listValue[i].id} /> </li>;
         })}
-      </ul>
+
         </div >
       )
   }

@@ -28,12 +28,12 @@ class Album extends Component {
       });
   }
   orderaArray() {
-    this.state.songs.sort(function (a, b) {
+    let obj = this;
+    let arrSongs = this.state.songs;
+    arrSongs.sort(function (a, b) {
       return parseFloat(a.duration_ms) - parseFloat(b.duration_ms);
     });
-    console.log(this.state.songs);
-    this.render();
-    alert("The songs are sorted by duration");
+    obj.setState({ songs: arrSongs });
   }
 
   render() {
@@ -49,7 +49,8 @@ class Album extends Component {
             return <li key={i}> <a href={listValue.preview_url}> {listValue.name} </a> </li>;
           })}
         </ul>
-        <button type="button" class="btn btn-primary" onClick={() => { { obj.orderaArray() } }}>Ordenar por duracion</button>
+        <button id="btno" type="button" className="btn btn-primary center-block" onClick={() => { { obj.orderaArray() } }}>Ordenar por duracion</button>
+
 
       </div>
     );

@@ -57,3 +57,11 @@ h4 {
 h5 {
   color: white;
 }
+.hidden {
+  display:none; 
+  visibility:hidden;
+} 
+.visible {
+  display:block;
+  visibility:visible;
+}

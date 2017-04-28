@@ -59,11 +59,11 @@ class InputSearch extends Component {
         <input type="text" id="inputSearch" class="form-control" placeholder="Search the name of your favorite artist">
         </input>
         <input type="submit" id="search" class="form-control" className="btn" value="search" onClick={this.handleClickSearch.bind(this)}></input>
-        <div class="text-center">
-          <ul>
+        <div class="container">
+          <ul class="list-group">
             {
               this.state.names.map(function (listValue, i) {
-                return <li key={i}> < Artist artistName={listValue[i].name} logo={listValue[i].images[1].url} artistId={listValue[i].id} /> </li>;
+                return <li class="list-group-item" key={i}> < Artist artistName={listValue[i].name} logo={listValue[i].images[1].url} artistId={listValue[i].id} /> </li>;
               })}
           </ul>
         </div>
