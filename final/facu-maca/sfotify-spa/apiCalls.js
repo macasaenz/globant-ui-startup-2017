@@ -2,12 +2,18 @@ class apiCalls {
 	constructor() {
 	}
 	genSearch(type, q) {
+		let a;
 		$.get('https://api.spotify.com/v1/search?q=' + q + "&type=" + type, function (data) {
-			for (var i in data.artists.items) {
+			alert("href: " + data.artists.href)
+			/*for (var i in data.artists.items) {
 				alert(data.artists.items[i].name);
-			}
-			//alert("href: " + data.artists.href)
+			}*/
+			a = "vuelta";
+			alert("dentro del get " + a);
+			return a;
 		})
+		alert("dentro del genserch "+a);
+		return a;
 	}
 
 	getArtistAlbum(idArtista, callback) {

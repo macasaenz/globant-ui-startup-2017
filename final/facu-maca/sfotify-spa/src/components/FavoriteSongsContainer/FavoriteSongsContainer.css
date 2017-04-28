@@ -1,17 +1,14 @@
 .FavoriteSongsContainer {
-  border: 1px solid black ;
-  width:35%;
-  position:absolute;
-}
+  border: 1px solid black;
+  width: 35%;
+  position: absolute; }
 
 .FavoriteSongsContainer-album {
   display: inline;
-  float:left;
-  width: 32%;
-}
+  float: left;
+  width: 32%; }
 
 .FavoriteSongsContainer-description {
   display: inline;
-  float:right;
-  width: 68%;
-}
+  float: right;
+  width: 68%; }
