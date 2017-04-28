@@ -9,6 +9,7 @@
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
+    "axios": "^0.16.1",
     "eslint": "^3.19.0",
     "react-scripts": "0.9.5"
   },

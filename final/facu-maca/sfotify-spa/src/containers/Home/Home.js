@@ -12,7 +12,7 @@ class Home extends Component {
     return (
       <div>
         <Header />
-        <Title texts="Sfotify" styleName="text-color-white" />
+        <Title texts="Search Artist" styleName="text-color-white" />
         <InputSearch />
         <Subtitle />
         <Footer text="Footer" />

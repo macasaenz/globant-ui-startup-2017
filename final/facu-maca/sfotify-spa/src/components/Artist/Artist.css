@@ -14,17 +14,17 @@ div {
 }
 
 ul {
+  width: 100%
+display: block;
   margin: auto;
   border-top: 1px solid #ccc;
-  display: block;
- 
 }
 
 li {
   line-height: 1.5em;
   border-bottom: 1px solid #ccc;
+  float: left;
   display: block;
-
 }
 
 #double li {
@@ -52,8 +52,5 @@ li {
 }
 
 h4 {
-  color: white;
-}
-h5 {
   color: white;
 }

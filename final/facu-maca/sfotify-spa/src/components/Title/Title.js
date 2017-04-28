@@ -8,7 +8,7 @@ class Title extends Component {
     const styleName = this.props.styleName;
     return (
       <div>
-      {/* <h1 className={classnames('default', styleName)}> {title} </h1>*/}
+        <h1 className={classnames('default', styleName)}> {title} </h1>
       </div>
     );
   }
